@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <title>Login | WaterDrople</title>
+    <link rel="icon" href="/Images/Docker-Logo-White-RGB_Moby.png" type="image/icon type">
+</head>
+
+<body>
+    <div class="nav fixed-top">
+        <a href="/Home.html" style="width: 60px; margin: 10px 30px;">
+            <img src="/Images/Docker-Logo-White-RGB_Moby.png" alt="Logo" style="width: 60px; margin: 10px 30px;">
+        </a>
+    </div>
+    <nav id="nav-example" class="nav justify-content-end fixed-top" style="margin: 10px 30px;">
+        <a class="nav-link text-light" href="/Home.html">Home</a>
+        <a class="nav-link text-light" href="/Login.html">Login</a>
+        <a class="nav-link text-light" href="/About.html">About</a>
+        <a class="nav-link text-bg-light rounded-5" href="/Contacts.html">Contact</a>
+    </nav>
+    <div id="div1" style="height:100vh;">
+        <img id="img1" style="height: 75%;" src="/Images/badmintun.png" alt="">
+        <img id="img2" style="height: 75%;" src="/Images/hickey.png" alt="">
+        <main>
+            <div class="main-container">
+                <h2 class="fw-bold" style="font-size: 40px;">Sign In</h2>
+                <form name="myform" onsubmit="return formValidator()">
+                    <p>Email Address</p>
+                    <input type="text" id="email" name="email" placeholder="abc@xyz.com">
+                    <p>Password</p>
+                    <input type="password" id="pass" name="pass" placeholder="Enter Password"><br>
+                    <input type="submit" name="" value="Login"><br>
+                </form>
+                <h4>OR</h4>
+                <input type="button" class="button_active" value="Create a Account" onclick="location.href='/Register.html';" />
+            </div>
+        </main>
+    </div>
+    <style>
+        #div1 {
+            background: linear-gradient(to top, #360033, #0b8793);
+        }
+        
+        body {
+            color: white;
+            background-image: url();
+            background-size: 100%;
+            background-repeat: no-repeat;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        #img1 {
+            width: 600px;
+            position: absolute;
+            top: 100px;
+            transform: rotate(30deg);
+        }
+        
+        #img2 {
+            width: 600px;
+            position: absolute;
+            top: 120px;
+            left: 1200px;
+            transform: rotate(0deg);
+        }
+        
+        .container {
+            position: relative;
+            text-align: center;
+        }
+        
+        .top-left {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+        }
+        
+        .top-right {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+        }
+        
+        .main-container {
+            width: 360px;
+            height: 420px;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+        }
+        
+        h1 {
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            font-size: 60px;
+            width: 600px;
+        }
+        
+        h2 {
+            margin: 0;
+            padding: 0 0 10px;
+            position: relative;
+            left: 100px;
+        }
+        
+        p {
+            margin: 0;
+            position: relative;
+            left: 120px;
+            padding: 15px 7px 2px;
+        }
+        
+        input {
+            margin-bottom: 7px;
+        }
+        /*.main-container input[type="text"], input[type="password"] {
+    border: none;
+    border-bottom: 1px solid;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    font-size: 12px;
+}*/
+        
+        .main-container input[type="text"],
+        input[type="password"] {
+            border: none;
+            outline: none;
+            width: 240px;
+            height: 40px;
+            position: relative;
+            left: 50px;
+            background: #BDBABA;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        .main-container input[type="submit"] {
+            border: none;
+            outline: none;
+            width: 245px;
+            height: 40px;
+            position: relative;
+            left: 50px;
+            background: #0b8793;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .main-container input[type="submit"]:hover {
+            cursor: pointer;
+            background-color: #360033;
+        }
+        
+        h4 {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        h4:before,
+        h4:after {
+            content: "";
+            flex: 1 1;
+            border-bottom: 1.5px solid #000;
+            margin: auto;
+        }
+        
+        #CA {
+            margin-top: 0px;
+            padding: 5px 63px;
+            width: 245px;
+            height: 40px;
+            background: white;
+            color: black;
+            font-size: 16px;
+            border-radius: 40px;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .main-container input[type="button"] {
+            width: 245px;
+            height: 40px;
+            background: white;
+            color: black;
+            font-size: 16px;
+            border-radius: 40px;
+            position: relative;
+            left: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        
+        .main-container input[type="button"]:hover {
+            cursor: pointer;
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+
+    <script>
+        function formValidator() {
+            var email = document.getElementById("email");
+            if (emailvalidator(email, "pls enter a proper email id ")) {
+                return true;
+            }
+            returnfalse;
+
+
+            //     var email = document.forms["myform"]["email"].value;
+            //     var password = document.forms["myform"]["pass"].value;
+
+            //     if (email.value == "") {
+            //         alert("LUND");
+            //     }
+            // }
+
+            // return false;
+
+
+            // function isAlphabet(elem, helperMsg) {
+            //     var alphaExp = /^[a-zA-z]+$/;
+            //     if (elem.value.match(alphaExp)) {
+            //         return true;
+            //     } else {
+            //         alert(helperMsg);
+            //         elem.focus();
+            //         return false;
+            //     }
+            // }
+
+            // function emailvalidator(elem, helperMsg) {
+            //     var alphaExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            //     if (elem.value.match(alphaExp)) {
+            //         return true;
+            //     } else {
+            //         alert(helperMsg);
+            //         elem.focus();
+            //         return false;
+            //     }
+            // }
+
+            // function passvalidator(elem, helperMsg) {
+            //     var alphaExp = /^[a-zA-Z0-9]\w{2,3}+$/;
+            //     if (elem.value.match(alphaExp)) {
+            //         return true;
+            //     } else {
+            //         alert(helperMsg);
+            //         elem.focus();
+            //         return false;
+            //     }
+            // }
+
+            // function madeSelection(elem, elem2, helperMsg) {
+            //     console.log(elem.value);
+            //     console.log(elem2.value);
+            //     if (elem.value == false && elem2.value == false) {
+            //         alert(helperMsg);
+            //         elem.focus();
+
+            //         return false;
+            //     } else {
+            //         return true;
+            //     }
+        }
+
+        function emailvalidator(elem, helperMsg) {
+            var alphaExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (elem.value.match(alphaExp)) {
+                return true;
+            } else {
+                alert(helperMsg);
+                elem.focus();
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

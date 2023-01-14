@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <title>Where to buy | WaterDrople</title>
+    <link rel="icon" href="/Images/Docker-Logo-White-RGB_Moby.png" type="image/icon type">
+</head>
+<body>
+    <div class="nav fixed-top">
+        <a href="/Home.html" style="width: 60px; margin: 10px 30px;">
+            <img src="/Images/Docker-Logo-White-RGB_Moby.png" alt="Logo" style="width: 60px; margin: 10px 30px;">
+        </a>
+    </div>
+    <nav id="nav-example" class="nav justify-content-end fixed-top" style="margin: 10px 30px;">
+        <a class="nav-link text-light" href="/Home.html">Home</a>
+        <a class="nav-link text-light" href="/Login.html">Login</a>
+        <a class="nav-link text-light" href="#div2">About</a>
+        <a class="nav-link text-bg-light rounded-5" href="/Contacts.html">Contact</a>
+    </nav>
+    <div id="div1" style="height:100vh;">
+        <h1>Where to Buy</h1>
+        <div id="map">
+            <iframe src="https://my.atlistmaps.com/map/3ba82e34-7592-487a-988c-6c2bae7169c9?share=true" allow="geolocation" width="1200px" height="600px" frameborder="no" scrolling="no"></iframe>
+        </div>
+    </div>
+    <div id="div2" style="height:100vh;">
+        <div id="OutterBox" class="container-fuild">
+            <div id="AboutDrople" class="container">
+                <h4>About WaterDrople</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur alias eius obcaecati corrupti suscipit eos molestiae, enim voluptatum beatae, dolorem quia nesciunt dolore perspiciatis fugiat eum possimus? Ea, obcaecati omnis.</p>
+                <a href="https://facebook.com"><img src="/Images/Facebook.png" alt="Facebook"></a>
+                <a href="https://Instagram.com"><img src="/Images/Instagram.png" alt="Instagram"></a>
+                <a href="https://Twitter.com"><img src="/Images/Twitter.png" alt="Twitter"></a>
+                <p class="LLC">© WaterDrople Hydration LLC</p>
+            </div>
+            <div id="Bottles" class="container">
+                <h4>Bottles</h4>
+                <ul>
+                    <li><a href="/BottleKart/MoonWhite.html" rel="Sold out">Moon White</a></li>
+                    <li><a href="/BottleKart/DarkBlack.html" rel="Sold out">Dark Black</a></li>
+                    <li><a href="/BottleKart/ShinyGrey.html" rel="Sold out">Shiny Grey</a></li>
+                    <li><a href="/BottleKart/LightPink.html" rel="Sold out">Light Pink</a></li>
+                    <li><a href="/BottleKart/DarkPink.html" rel="Sold out">Dark Pink</a></li>
+                </ul>
+            </div>
+            <div id="Links" class="container">
+                <ul>
+                    <li><a href="/About.html">About WaterDrople</a></li>
+                    <li><a href="/Wheretobuy.html">Where to buy</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="/Terms.html">Terms of use</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            <div id="Newsletter" class="container">
+                <h4>NEWSLETTER</h4>
+                <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                <input type="email" name="email" id="email">
+                <input type="number" name="number" id="phone">
+                <div id="CheckboxItems" class="container-fluid bg-dark">
+                    <input type="checkbox" name="checkbok" id="checkbox">
+                    <p>By signing up, you agree to receive marketing text messages from WaterDrople Hydration at the number used, including messages sent by autodialer. Consent is not a condition of purchase. Message and data rates may apply. Message frequency varies. Reply HELP for help or STOP to cancel. View our Privacy Policy and Terms of Service.</p>
+                </div>
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <style>
+        #div1{
+            background: linear-gradient(to top, #636363, #a2ab58);
+        }
+
+        h1 {
+            position: absolute;
+            top: 80px;
+            margin-left: 650px;
+        }
+
+        #map {
+            position: absolute;
+            margin-left: 200px;
+            top: 150px;
+        }
+
+        #div2 {
+            background: linear-gradient(to top, #000,#636363);
+        }
+
+        #div2 img {
+            width: 20px;
+            margin-right: 20px;
+        }
+
+        #AboutDrople {
+            position: absolute;
+            top: 1100px;
+            width: 400px;
+            margin-left: 80px;
+            color: #fff;
+        }
+
+        #AboutDrople .LLC{
+            margin-top: 200px;
+        }
+
+        #Bottles{
+            position: absolute;
+            top: 1095px;
+            width: 400px;
+            margin-left: 550px;
+            color: #fff;
+        }
+
+        #Bottles ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #Bottles li{
+            margin-top: 30px;
+        }
+
+        #Bottles a{
+            text-decoration: none;
+            color: white;
+        }
+
+        #Links {
+            position: absolute;
+            top: 1065px;
+            width: 400px;
+            margin-left: 850px;
+            color: #fff;
+        }
+
+        #Links ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #Links li {
+            margin-top: 30px;
+        }
+
+        #Links a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #Newsletter {
+            position: absolute;
+            top: 1090px;
+            width: 300px;
+            margin-left: 1150px;
+            color: #fff;  
+        }
+
+        #email {
+            margin-bottom: 10px;    
+        }
+
+        #CheckboxItems {
+            font-size: x-small;
+            width: 200px;
+            margin: 10px 0px;
+            padding: 10px 20px;
+        }
+
+        #CheckboxItems p {
+            margin: 0;
+            padding: 0;
+        }
+
+        #checkbox {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</body>
+</html>
